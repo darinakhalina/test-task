@@ -1,0 +1,46 @@
+.jumbotron {
+  position        : absolute;
+  top             : 50%;
+  width           : 100%;
+  text-align      : center;
+  background-color: transparentize($gray-darker, .5);
+  transform       : translateY(-50%);
+  h1,
+  .title-l {
+    width         : 73%;
+    margin        : 13px auto 0.5em;
+    text-transform: uppercase;
+    color         : $base-light;
+  }
+  .btn-holder {
+    width : 232px;
+    margin: {
+      left : auto;
+      right: auto;
+      top  : 25px;
+    }
+  }
+  .btn {
+    color    : $gray-darker;
+    font-size: 0.8375em;
+    &.disabled:active,
+    &[disabled]:active {
+      color: $gray-darker;
+    }
+  }
+  &-holder {
+    position: relative;
+    height  : calc(100vh - 99px);
+  }
+}
+@media (min-width: $container-lg) {
+  .jumbotron {
+    & h1,
+    & .title-l {
+      font-size: 4.35em;
+    }
+    .btn-holder {
+      margin-top: 35px;
+    }
+  }
+}

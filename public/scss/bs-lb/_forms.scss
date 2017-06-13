@@ -1,0 +1,28 @@
+.form-control {
+  font-size: 0.9375em;
+  &:focus,
+  &:active {
+    border-color       : $brand-primary;
+    box-shadow         : none;
+    animation-name     : pulse;
+    animation-duration : 0.75s;
+    animation-fill-mode: both;
+  }
+}
+input.form-control {
+  padding: 0 20px;
+}
+textarea.form-control {
+  padding: 20px;
+}
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.01, 1.01, 1.01);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}

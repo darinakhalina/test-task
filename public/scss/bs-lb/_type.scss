@@ -1,0 +1,98 @@
+h1,
+h2,
+h3,
+.title {
+  &-l,
+  &-m,
+  &-s {
+    margin     : {
+      top   : 1.414em;
+      bottom: 0.7em;
+    }
+    text-align : center;
+    color      : $brand-primary;
+    line-height: $headings-line-height;
+  }
+}
+.title-m,
+h2 {
+  margin-bottom: 0.7em;
+  font-size    : $font-size-h2;
+}
+.title-m {
+  text-transform: uppercase;
+  color         : $gray-base;
+  small {
+    display       : block;
+    margin-bottom : 1.3em;
+    font          : {
+      size  : 0.575em;
+      family: "oswald400";
+    }
+    color         : $gray;
+    text-transform: uppercase;
+  }
+  &::after {
+    content   : "";
+    display   : block;
+    height    : 2px;
+    width     : 170px;
+    margin    : {
+      top  : 0.6em;
+      left : auto;
+      right: auto;
+    }
+    background: $brand-primary;
+  }
+}
+.title-s,
+h3 {
+  color         : $gray-base;
+  font-family   : "oswald400";
+  font-size     : $font-size-h3;
+  text-transform: uppercase;
+}
+p {
+  a + a {
+    margin-left: 20px;
+  }
+}
+blockquote {
+  margin : 0;
+  padding: 0;
+  border : none;
+  &:focus {
+    outline: none;
+  }
+  .title-m {
+    margin-top    : 0;
+    margin-bottom : 1.3em;
+    text-transform: none;
+    color         : inherit;
+    line-height   : 1.2;
+    font          : {
+      family: "oswald400";
+      size  : $font-size-h3;
+    }
+    &:after {
+      margin-top: 1.3em;
+    }
+  }
+  p {
+    max-width: 550px;
+    margin   : {
+      left : auto;
+      right: auto;
+    }
+  }
+  ol,
+  p,
+  ul {
+    &:last-child {
+      margin: {
+        bottom: 4px;
+        top   : -8px;
+      }
+    }
+  }
+}

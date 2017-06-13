@@ -1,0 +1,28 @@
+.media {
+  text-align: left;
+  overflow  : visible;
+  h2 {
+    font          : {
+      size  : 1em;
+      family: "oswald400";
+    }
+    text-transform: uppercase;
+  }
+  .fa {
+    text-align: center;
+  }
+  &-body {
+    overflow: visible;
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+    p {
+      & a {
+        margin-top: 8px;
+        & + a {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

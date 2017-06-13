@@ -1,0 +1,48 @@
+.navbar {
+  padding       : 22px 0;
+  font          : {
+    family: "oswald700";
+    size  : 0.875em;
+  }
+  text-transform: uppercase;
+  &-nav {
+    position: relative;
+    top     : 3px;
+    & > li::after {
+      content : "";
+      position: relative;
+      top     : -29px;
+      right   : 14px;
+    }
+    & > li:first-child::after {
+      display: none;
+    }
+  }
+  &-brand {
+    padding    : 0 0 0 15px;
+    line-height: inherit;
+    & > img {
+      position: relative;
+      top     : -6px;
+    }
+  }
+  &-default {
+    .navbar-toggle {
+      margin-right    : 30px;
+      border          : none;
+      background-color: transparent;
+      &:hover {
+        background-color: $brand-primary;
+        border-radius   : $border-radius-small;
+      }
+      &:active,
+      &:focus {
+        border          : none;
+        background-color: transparent;
+      }
+      .icon-bar {
+        background-color: $base-light;
+      }
+    }
+  }
+}
